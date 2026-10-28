@@ -1,0 +1,47 @@
+name: Bug report
+description: Something isn't working as expected
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for reporting! Please never paste personal access tokens, and redact organization, project and people names if needed.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you see, and what did you expect instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Launch the app
+        2. Open the dropdown
+        3. …
+  - type: textarea
+    id: once
+    attributes:
+      label: Output of `--once`
+      description: Run `/Applications/DevOpsStatus.app/Contents/MacOS/DevOpsStatus --once` and paste the output with names redacted if needed.
+      render: console
+  - type: input
+    id: app-version
+    attributes:
+      label: App version
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: input
+    id: macos-version
+    attributes:
+      label: macOS version
+      placeholder: "macOS 15.1"
+    validations:
+      required: true
+  - type: input
+    id: server
+    attributes:
+      label: Azure DevOps Services or Server
+      placeholder: "dev.azure.com, or Azure DevOps Server 2022"
